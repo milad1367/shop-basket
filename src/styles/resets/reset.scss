@@ -1,0 +1,280 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
+    border-width: 0;
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+ol,
+ul,
+dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+p {
+    margin: 0;
+}
+
+.ui-modal-main {
+    min-height: 250px;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+
+    img {
+        -webkit-animation: spin 2s linear infinite;
+        /* Safari */
+        animation: spin 2s linear infinite;
+
+        /* Safari */
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
+.ui-table {
+    border: 0 !important;
+}
+
+.ui-label {
+    border-width: 2px !important;
+}
+
+.ui-confirm-modal-footer button {
+    padding: unset !important;
+}
+
+.unsecured-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.ui-tooltip {
+    img {
+        margin-bottom: -3px;
+    }
+}
+
+.ui-input {
+    input:read-only {
+        cursor: not-allowed !important;
+    }
+}
+
+.hide-thumb {
+    cursor: not-allowed !important;
+}
+
+.ui-table {
+    border: 0.125em solid #000;
+    background-color: #ffffff;
+    color: black;
+}
+
+.ui-pagination-item {
+    background-color: #5874a8;
+    color: #ffffff;
+}
+
+.ui-timer-element-box {
+    background-color: #5874a8;
+}
+
+.ui-timer-element-box b {
+    color: #b5b9c1;
+}
+
+.ui-tabs-tab-button {
+    color: #555555 !important;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.ui-pagination.purple-theme .ui-pagination-item-selected {
+    background-color: white;
+}
+
+.ui-button-secondary-high {
+    background: #ffffff;
+    color: #20181a;
+    border-radius: 17.5px;
+    font-weight: bold;
+}
+
+.ui-modal-header {
+    background: #84a7c6;
+    color: white;
+}
+
+.ui-modal-body {
+    background: #ffffff;
+    color: #555555;
+}
+
+.ui-input input {
+    background-color: #0d2d4c;
+}
+
+.ui-modal-header {
+    svg {
+        fill: white;
+    }
+}
+
+.ui-button-simple-outlined {
+    padding: 10px 20px;
+    border-radius: 17.5px;
+}
+
+.ui-tooltip-box {
+    background: #0d2d4c;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    color: #ffffff;
+
+    &.ui-tooltip-box-bottom::after {
+        bottom: 98%;
+        left: 50%;
+        border-color: transparent transparent #ffffff transparent;
+    }
+}
+
+.nft-pool-box-container {
+    .ui-button:disabled,
+    .ui-button[disabled] {
+        border: 1px solid #ffffff;
+        background: #ffffff00 !important;
+        color: rgb(255, 255, 255) !important;
+    }
+}
+
+.ui-tabs-border-bottom {
+    width: 100px !important;
+}
+
+.tv-ticker-item-last__body {
+    color: #2f333e !important;
+}
+
+.tv-ticker-item-last__short-name {
+    color: #2f333e !important;
+}
+
+html.theme-dark .tv-ticker-item-last__body {
+    color: #2f333e !important;
+}
+
+.ui-button.purple-theme.ui-button-primary {
+    background: #6db0ec;
+}
+
+.ui-confirm-modal-description {
+    color: #646464;
+}
+
+.ui-tooltip-box::after {
+    display: none;
+}
+
+.ui-tooltip {
+    * {
+        color: #ffffff !important;
+        font-weight: normal;
+    }
+}
+
+.ui-loading-circle-animate {
+    stroke: #6b16c0a1;
+    filter: drop-shadow(0 0 3px #e2b8fc) !important;
+}
+
+.ui-slider-range-label-box-name {
+    background-color: #1f242b;
+    color: #ffffff;
+}
+
+.ui-label {
+    &-blue {
+        &-empty {
+            border-color: #38afee;
+            color: #555555;
+        }
+    }
+
+    &-purple {
+        &-empty {
+            color: #555555;
+        }
+    }
+
+    &-gray {
+        &-empty {
+            color: #555555;
+        }
+    }
+}
+.error {
+    color: red;
+}
+.m-hidden {
+    @media (max-width: 450px) {
+        display: none;
+    }
+}

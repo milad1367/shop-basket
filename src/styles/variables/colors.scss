@@ -1,0 +1,80 @@
+html {
+    // font-family: "Samim", sans-serif;
+    scroll-behavior: smooth;
+
+    // --color-white: #ffffff;
+    --color-gray-1: #404348;
+    --color-gray-2: #343a48;
+    --color-gray-3: #2f353e;
+    --color-primary: #ffa005;
+    --color-white: #8e9092;
+    --color-red: #ee5034;
+    --color-blue: #0da7e2;
+    --color-green: #408e21;
+    --color-orange: #ef6f38;
+    --color-black: #000000;
+
+    --status-active-border-color: #ff8103;
+    --status-open-border-color: #008d0c;
+    --status-open-feature-color: #979797;
+
+    --modal-input-label-color: #fff;
+    --modal-input-label-size: 18px;
+    --modal-input-value-color: #fff;
+    --modal-input-value-size: 24px;
+
+    --modal-header-title-color: #fff;
+    --modal-header-title-size: 18px;
+
+    --modal-description-color: #fff;
+    --modal-description-size: 18px;
+    --modal-btn-color: #fff;
+    --modal-btn-size: 16px;
+    --modal-background: linear-gradient(180deg, #404a4f 99.91%, #707e84 0%);
+    --modal-confirm-btn-background: linear-gradient(180deg, #ff7b03 99.91%, #ffa005 0%);
+
+    --color-sub-dark: #9f9f9f;
+    --color-sub-light: #a7a9ad;
+
+    --color-primary-main: #272d37;
+    --color-primary-light: #20262f;
+    --color-primary-dark: #1e232b;
+    --color-primary-content: var(--color-white);
+
+    --color-secondary-main: #121212;
+    --color-secondary-light: #0d2d4c;
+    --color-secondary-dark: var(--color-black);
+    --color-secondary-content: #8f8f8f;
+
+    --color-accent-main: #ee8213;
+    --color-accent-light: #f09714;
+    --color-accent-dark: #df7009;
+    --color-accent-content: #bd600c;
+
+    //alert color
+    --ui-toast-success-bg-color: rgba(0, 141, 12, 0.2);
+    --ui-toast-success-color: #ffffff;
+    --ui-toast-success-border-color: rgba(0, 141, 12, 0.3);
+    --ui-toast-success-icon-color: #008d0c;
+    --ui-toast-success-action-bg-color: rgba(0, 141, 12, 0.2);
+    --ui-toast-success-action-border-color: rgba(0, 141, 12, 0.3);
+
+    --ui-toast-error-bg-color: #4f1524;
+    --ui-toast-error-color: #ffffff;
+    --ui-toast-error-border-color: #840e1a;
+    --ui-toast-error-icon-color: #c76a74;
+    --ui-toast-error-action-bg-color: rgba(156, 11, 19, 0.3);
+    --ui-toast-error-action-border-color: #9c0b13;
+
+    --ui-toast-warning-bg-color: rgba(219, 160, 0, 0.2);
+    --ui-toast-warning-color: #ffffff;
+    --ui-toast-warning-border-color: rgba(219, 160, 0, 0.3);
+    --ui-toast-warning-icon-color: #dba000;
+    --ui-toast-warning-action-bg-color: rgba(219, 160, 0, 0.2);
+    --ui-toast-warning-action-border-color: rgba(219, 160, 0, 0.3);
+
+    --ui-toast-info-bg-color: #d1e8ff;
+    --ui-toast-info-color: #ffffff;
+    --ui-toast-info-border-color: #b0d7fe;
+    --ui-toast-info-icon-color: #1d8cf8;
+}

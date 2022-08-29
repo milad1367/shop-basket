@@ -1,7 +1,11 @@
-import React from "react";
+import Products from "./components/Products";
 
 function App() {
-  return <div className="App">Shopping basket </div>;
+  return (
+    <div className="App">
+      <Products />
+    </div>
+  );
 }
 
 export default App;
