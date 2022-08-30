@@ -1,10 +1,23 @@
+import { useDispatch } from "react-redux";
+import { add } from "../../state/basketSlice";
+
 import "./index.scss";
+
+interface IData {
+  name: string;
+  price: string;
+  poster: string;
+  orderLimitTime: string;
+}
 interface IProductItem {
-  data: any;
+  data: IData;
 }
 export default function ProductItem({ data }: IProductItem) {
   const { name, price, poster, orderLimitTime } = data;
-  const addToBasket = () => {};
+  const dispatch = useDispatch();
+  const addToBasket = () => {
+    dispatch(add(name));
+  };
   return (
     <div className="product">
       <div>

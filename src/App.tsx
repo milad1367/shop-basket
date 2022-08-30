@@ -1,9 +1,9 @@
-import Store from "./components/Store";
+import Shop from "./components/Shop";
 
 function App() {
   return (
     <div className="App">
-      <Store />
+      <Shop />
     </div>
   );
 }
