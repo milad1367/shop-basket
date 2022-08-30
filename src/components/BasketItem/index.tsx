@@ -1,17 +1,19 @@
-// import { useDispatch } from "react-redux";
-// import { selectBasket } from "../../state/basketSlice";
-// import { useAppSelector } from "../../state/hooks";
+import { useDispatch } from "react-redux";
+import { remove } from "../../state/basketSlice";
+
 import "./index.scss";
 
 interface IBasketItem {
   data: any;
 }
 export default function BasketItem({ data }: IBasketItem) {
-  const { name, price, poster, orderLimitTime } = data;
-  const onRemove = () => {};
+  const { name, price, poster, orderLimitTime, id } = data;
+  const dispatch = useDispatch();
+  const onRemove = () => {
+    dispatch(remove(id));
+  };
   return (
-    <div>
-      <div>BasketItem</div>
+    <div className="basket-item">
       <div>
         <img alt="" src={poster} />
       </div>

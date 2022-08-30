@@ -11,7 +11,7 @@ export default function Shop() {
     <div className="store">
       <Products items={data} />
       {error && <div>We have some error for getting pools</div>}
-      <Basket items={orders} />
+      <Basket />
     </div>
   );
 }
