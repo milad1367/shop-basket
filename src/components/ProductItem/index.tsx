@@ -16,7 +16,7 @@ export default function ProductItem({ data }: IProductItem) {
   const { name, price, poster, orderLimitTime } = data;
   const dispatch = useDispatch();
   const addToBasket = () => {
-    dispatch(add(name));
+    dispatch(add(name, orderLimitTime, price));
   };
   return (
     <div className="product">
