@@ -1,0 +1,11 @@
+.amount {
+  color: #474747;
+  &-value {
+    font-size: 14px;
+    font-family: "Roboto-Thin";
+  }
+  &-currency {
+    font-size: 10px;
+    padding: 3px;
+  }
+}

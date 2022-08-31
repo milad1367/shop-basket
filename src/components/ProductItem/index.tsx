@@ -1,6 +1,8 @@
 import { useDispatch } from "react-redux";
 import { addProduct } from "../../state/basketSlice";
-
+import RepeatMusicIcon from "../../assets/svgs/repeat_music.svg";
+import Amount from "../Amount";
+import { millisecondToMinutes } from "../../utils";
 import "./index.scss";
 
 interface IData {
@@ -20,13 +22,24 @@ export default function ProductItem({ data }: IProductItem) {
   };
   return (
     <div className="product">
-      <div>
-        {/* <img alt="test" width={160} height={160} src={poster} /> */}
+      <div className="product-img">
+        <img alt="test" width={160} height={160} src={poster} />
+        <div className="product-img-time">
+          <img width={16} height={16} alt="remove_time" src={RepeatMusicIcon} />
+          <div className="product-img-time-value">
+            {millisecondToMinutes(orderLimitTime)} min
+          </div>
+        </div>
       </div>
-      <div>{name}</div>
-      <div>{orderLimitTime}</div>
-      <div>{price}</div>
-      <button onClick={addToBasket}>Add to basket</button>
+      <div className="product-details">
+        <div className="product-details-name">{name}</div>
+        <div className="product-details-amount">
+          <Amount price={price} currency="USD" />
+        </div>
+        <button className="product-details-button" onClick={addToBasket}>
+          Add to basket
+        </button>
+      </div>
     </div>
   );
 }

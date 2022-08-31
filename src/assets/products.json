@@ -4,7 +4,7 @@
       "name": "Mugr",
       "price": "150.00",
       "poster": "./img/products/mug.webp",
-      "orderLimitTime": "200000000"
+      "orderLimitTime": "2000"
     },
     {
       "name": "Sqoop",

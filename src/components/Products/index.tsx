@@ -6,13 +6,9 @@ import "./index.scss";
 export default function Products() {
   const [items, error] = useProducts();
   return (
-    <div className="products">
+    <div className="products row">
       {items &&
-        items.map((item: any) => (
-          <div key={item.name}>
-            <ProductItem data={item} />
-          </div>
-        ))}
+        items.map((item: any) => <ProductItem key={item.name} data={item} />)}
       {!error && !items && <div>Getting products ...</div>}
       {error && <div>We have some error for getting pools</div>}
     </div>
