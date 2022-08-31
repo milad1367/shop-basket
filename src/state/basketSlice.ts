@@ -16,7 +16,7 @@ export const basketSlice = createSlice({
   initialState,
 
   reducers: {
-    add: {
+    addProduct: {
       reducer(state, action: PayloadAction<Item>) {
         const { name, orderLimitTime, price } = action.payload;
         const existingProduct = state.find(
@@ -41,13 +41,13 @@ export const basketSlice = createSlice({
       },
     },
 
-    remove: (state, action) => {
+    removeProduct: (state, action) => {
       return state.filter((item) => item.id !== action.payload);
     },
   },
 });
 
-export const { add, remove } = basketSlice.actions;
+export const { addProduct, removeProduct } = basketSlice.actions;
 
 export const selectBasket = (state: RootState) => state.basket;
 

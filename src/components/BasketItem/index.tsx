@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import useTimeout from "../../hooks/useInterval";
-import { remove } from "../../state/basketSlice";
+import { removeProduct } from "../../state/basketSlice";
 
 import "./index.scss";
 
@@ -11,7 +11,7 @@ export default function BasketItem({ data }: IBasketItem) {
   const { name, price, poster, orderLimitTime, id } = data;
   const dispatch = useDispatch();
   const onRemove = () => {
-    dispatch(remove(id));
+    dispatch(removeProduct(id));
   };
   useTimeout(onRemove, orderLimitTime);
   return (

@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { add } from "../../state/basketSlice";
+import { addProduct } from "../../state/basketSlice";
 
 import "./index.scss";
 
@@ -16,7 +16,7 @@ export default function ProductItem({ data }: IProductItem) {
   const { name, price, poster, orderLimitTime } = data;
   const dispatch = useDispatch();
   const addToBasket = () => {
-    dispatch(add(name, orderLimitTime, price));
+    dispatch(addProduct(name, orderLimitTime, price));
   };
   return (
     <div className="product">
