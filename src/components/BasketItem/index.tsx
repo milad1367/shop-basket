@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import useTimeout from "../../hooks/useInterval";
 import { removeProduct } from "../../state/basketSlice";
 import TrashIcon from "../../assets/svgs/trash.svg";
+import Amount from "../Amount";
 import "./index.scss";
 
 interface IBasketItem {
@@ -30,10 +31,7 @@ export default function BasketItem({ data, isLastItem }: IBasketItem) {
         </div>
         <div className="basket-item-right">
           <div className="basket-item-right-name">{name}</div>
-          <div className="basket-item-right-price">
-            <span className="basket-item-right-price-value">$ {price}</span>
-            <span className="basket-item-right-price-currency">USD</span>
-          </div>
+          <Amount price={price} currency="USD" />
         </div>
       </div>
       {!isLastItem && <div className="basket-item-divider"></div>}
