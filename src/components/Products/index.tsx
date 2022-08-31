@@ -1,12 +1,10 @@
+import { useProducts } from "../../services/hooks/useProducts";
 import ProductItem from "../ProductItem";
 
 import "./index.scss";
 
-interface IProducts {
-  items: any[];
-}
-
-export default function Products({ items }: IProducts) {
+export default function Products() {
+  const [items, error] = useProducts();
   return (
     <div className="products">
       {items &&
@@ -15,6 +13,8 @@ export default function Products({ items }: IProducts) {
             <ProductItem data={item} />
           </div>
         ))}
+      {!error && !items && <div>Getting products ...</div>}
+      {error && <div>We have some error for getting pools</div>}
     </div>
   );
 }

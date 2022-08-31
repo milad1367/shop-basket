@@ -1,3 +1,7 @@
-.store {
-  display: flex;
+.shop {
+  height: 100%;
+  &-basket {
+    display: flex;
+    justify-content: flex-end;
+  }
 }

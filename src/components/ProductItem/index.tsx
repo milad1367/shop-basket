@@ -16,12 +16,12 @@ export default function ProductItem({ data }: IProductItem) {
   const { name, price, poster, orderLimitTime } = data;
   const dispatch = useDispatch();
   const addToBasket = () => {
-    dispatch(addProduct(name, orderLimitTime, price));
+    dispatch(addProduct(name, orderLimitTime, price, poster));
   };
   return (
     <div className="product">
       <div>
-        <img alt="test" src={poster} />
+        {/* <img alt="test" width={160} height={160} src={poster} /> */}
       </div>
       <div>{name}</div>
       <div>{orderLimitTime}</div>

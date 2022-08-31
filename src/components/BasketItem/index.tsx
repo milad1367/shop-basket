@@ -1,13 +1,14 @@
 import { useDispatch } from "react-redux";
 import useTimeout from "../../hooks/useInterval";
 import { removeProduct } from "../../state/basketSlice";
-
+import TrashIcon from "../../assets/svgs/trash.svg";
 import "./index.scss";
 
 interface IBasketItem {
   data: any;
+  isLastItem: boolean;
 }
-export default function BasketItem({ data }: IBasketItem) {
+export default function BasketItem({ data, isLastItem }: IBasketItem) {
   const { name, price, poster, orderLimitTime, id } = data;
   const dispatch = useDispatch();
   const onRemove = () => {
@@ -16,13 +17,26 @@ export default function BasketItem({ data }: IBasketItem) {
   useTimeout(onRemove, orderLimitTime);
   return (
     <div className="basket-item">
-      <div>
-        <img alt="" src={poster} />
+      <div className="row">
+        <div className="basket-item-left">
+          <div className="basket-item-left-items">
+            <div className="basket-item-left-img">
+              <img alt="img" src={poster} />
+            </div>
+            <button className="basket-item-left-button" onClick={onRemove}>
+              <img alt="trash" src={TrashIcon} />
+            </button>
+          </div>
+        </div>
+        <div className="basket-item-right">
+          <div className="basket-item-right-name">{name}</div>
+          <div className="basket-item-right-price">
+            <span className="basket-item-right-price-value">$ {price}</span>
+            <span className="basket-item-right-price-currency">USD</span>
+          </div>
+        </div>
       </div>
-      <button onClick={onRemove}>remove</button>
-      <div>{name}</div>
-      <div>{price}</div>
-      <div>{orderLimitTime}</div>
+      {!isLastItem && <div className="basket-item-divider"></div>}
     </div>
   );
 }

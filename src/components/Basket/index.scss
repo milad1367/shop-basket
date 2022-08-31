@@ -1,3 +1,27 @@
 .basket {
-  background-color: bisque;
+  background-color: white;
+  max-width: 337px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  &-container {
+    padding: 0 15px;
+  }
+
+  &-empty {
+    max-height: 442px;
+    &-items {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+    &-text {
+      font-size: 16px;
+      color: #6d6d7a;
+      font-weight: 300;
+      font-family: "Roboto-Thin";
+    }
+  }
 }

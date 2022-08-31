@@ -7,6 +7,7 @@ interface Item {
   id: string;
   orderLimitTime: string;
   price: string;
+  poster: string;
 }
 
 const initialState = [] as Item[];
@@ -29,13 +30,19 @@ export const basketSlice = createSlice({
           state.push(action.payload);
         }
       },
-      prepare(name: string, orderLimitTime: string, price: string) {
+      prepare(
+        name: string,
+        orderLimitTime: string,
+        price: string,
+        poster: string
+      ) {
         return {
           payload: {
             id: nanoid(),
             name,
             orderLimitTime,
             price,
+            poster,
           },
         };
       },

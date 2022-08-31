@@ -1,17 +1,15 @@
-import { useState } from "react";
-import "./index.scss";
 import Products from "../Products";
 import Basket from "../Basket";
-import { usePools } from "../../services/hooks/usePools";
-
+import "./index.scss";
 export default function Shop() {
-  const [data, error] = usePools();
-  const [orders, setOrders] = useState([] as any);
   return (
-    <div className="store">
-      <Products items={data} />
-      {error && <div>We have some error for getting pools</div>}
-      <Basket />
+    <div className="shop row">
+      <div className="col-xs-8">
+        <Products />
+      </div>
+      <div className="shop-basket col-xs-4">
+        <Basket />
+      </div>
     </div>
   );
 }

@@ -1,8 +1,64 @@
 .basket-item {
-  padding: 10px;
-  margin: 5px;
-  background-color: aqua;
-  button {
-    background-color: red;
+  padding: 15px 15px 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &-left {
+    padding-right: 20px;
+    &-items {
+      position: relative;
+    }
+    &-img {
+      width: 80px;
+      height: 80px;
+      background: #efefef;
+      border-radius: 10px;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-button {
+      width: 30px;
+      height: 30px;
+      background-color: #ff6a6a;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &-divider {
+    border-bottom: 1px solid #efefef;
+    padding-top: 15px;
+    max-width: 272px;
+    width: 100%;
+  }
+  &-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-name {
+      color: #474747;
+      font-size: 16px;
+      padding-bottom: 10px;
+    }
+    &-price {
+      color: #474747;
+      &-value {
+        font-size: 14px;
+        font-family: "Roberto-Thin";
+      }
+      &-currency {
+        font-size: 10px;
+        padding: 3px;
+      }
+    }
   }
 }
