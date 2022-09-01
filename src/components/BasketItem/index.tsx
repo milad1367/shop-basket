@@ -36,7 +36,11 @@ export default function BasketItem({ data, isLastItem }: IBasketItem) {
           </div>
         </div>
       </div>
-      {!isLastItem && <div className="basket-item-divider"></div>}
+      {!isLastItem && (
+        <div className="basket-item-divider">
+          <div className="basket-item-divider-item"></div>
+        </div>
+      )}
     </div>
   );
 }
