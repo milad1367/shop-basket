@@ -2,7 +2,6 @@ import { useDispatch } from "react-redux";
 import { addProduct } from "../../state/basketSlice";
 import RepeatMusicIcon from "../../assets/svgs/repeat_music.svg";
 import Amount from "../Amount";
-import { millisecondToSecs } from "../../utils";
 import "./index.scss";
 
 interface IData {
@@ -18,7 +17,9 @@ export default function ProductItem({ data }: IProductItem) {
   const { name, price, poster, orderLimitTime } = data;
   const dispatch = useDispatch();
   const addToBasket = () => {
-    dispatch(addProduct(name, orderLimitTime, price, poster));
+    dispatch(
+      addProduct(name, (Number(orderLimitTime) * 60).toString(), price, poster)
+    );
   };
   return (
     <div className="product">
@@ -27,7 +28,7 @@ export default function ProductItem({ data }: IProductItem) {
         <div className="product-img-time">
           <img width={16} height={16} alt="remove_time" src={RepeatMusicIcon} />
           <div className="product-img-time-value">
-            {millisecondToSecs(orderLimitTime)} min
+            {Number(orderLimitTime) / 1000} min
           </div>
         </div>
       </div>
