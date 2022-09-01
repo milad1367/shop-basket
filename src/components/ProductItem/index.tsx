@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { addProduct } from "../../state/basketSlice";
 import RepeatMusicIcon from "../../assets/svgs/repeat_music.svg";
 import Amount from "../Amount";
-import { millisecondToMinutes } from "../../utils";
+import { millisecondToSecs } from "../../utils";
 import "./index.scss";
 
 interface IData {
@@ -27,7 +27,7 @@ export default function ProductItem({ data }: IProductItem) {
         <div className="product-img-time">
           <img width={16} height={16} alt="remove_time" src={RepeatMusicIcon} />
           <div className="product-img-time-value">
-            {millisecondToMinutes(orderLimitTime)} min
+            {millisecondToSecs(orderLimitTime)} min
           </div>
         </div>
       </div>

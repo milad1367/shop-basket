@@ -18,20 +18,22 @@ export default function BasketItem({ data, isLastItem }: IBasketItem) {
   useTimeout(onRemove, orderLimitTime);
   return (
     <div className="basket-item">
-      <div className="row">
-        <div className="basket-item-left">
-          <div className="basket-item-left-items">
-            <div className="basket-item-left-img">
-              <img alt="img" src={poster} />
+      <div className="basket-item-container">
+        <div className="row">
+          <div className="basket-item-left">
+            <div className="basket-item-left-items">
+              <div className="basket-item-left-img">
+                <img alt="img" src={poster} />
+              </div>
+              <button className="basket-item-left-button" onClick={onRemove}>
+                <img alt="trash" src={TrashIcon} />
+              </button>
             </div>
-            <button className="basket-item-left-button" onClick={onRemove}>
-              <img alt="trash" src={TrashIcon} />
-            </button>
           </div>
-        </div>
-        <div className="basket-item-right">
-          <div className="basket-item-right-name">{name}</div>
-          <Amount price={price} currency="USD" />
+          <div className="basket-item-right">
+            <div className="basket-item-right-name">{name}</div>
+            <Amount price={price} currency="USD" />
+          </div>
         </div>
       </div>
       {!isLastItem && <div className="basket-item-divider"></div>}

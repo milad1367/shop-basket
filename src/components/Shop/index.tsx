@@ -7,7 +7,7 @@ export default function Shop() {
       <div className="col-xs-8">
         <Products />
       </div>
-      <div className="shop-basket col-xs-4">
+      <div className="col-xs-4 shop-basket">
         <Basket />
       </div>
     </div>

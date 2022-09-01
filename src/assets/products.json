@@ -4,13 +4,13 @@
       "name": "Mugr",
       "price": "150.00",
       "poster": "./img/products/mug.webp",
-      "orderLimitTime": "2000"
+      "orderLimitTime": "2000000000"
     },
     {
       "name": "Sqoop",
       "price": "112.99",
       "poster": "./img/products/sqoop.webp",
-      "orderLimitTime": "6000"
+      "orderLimitTime": "600000000"
     },
     {
       "name": "W glass",

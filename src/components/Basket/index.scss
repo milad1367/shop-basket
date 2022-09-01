@@ -3,6 +3,7 @@
   max-width: 337px;
   width: 100%;
   display: flex;
+  border-radius: 10px;
   flex-direction: column;
   &-container {
     padding: 0 15px;
@@ -10,6 +11,7 @@
 
   &-empty {
     max-height: 442px;
+    height: 100%;
     &-items {
       display: flex;
       flex: 1;
