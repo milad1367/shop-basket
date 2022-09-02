@@ -1,5 +1,5 @@
-import Products from "../Products";
-import Basket from "../Basket";
+import Basket from "../../features/Basket";
+import Products from "../../features/Products";
 import "./index.scss";
 export default function Shop() {
   return (

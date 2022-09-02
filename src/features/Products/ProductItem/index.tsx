@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
-import { addProduct } from "../../state/basketSlice";
-import RepeatMusicIcon from "../../assets/svgs/repeat_music.svg";
-import Amount from "../Amount";
+import { addProduct } from "../../../state/basketSlice";
+import RepeatMusicIcon from "../../../assets/svgs/repeat_music.svg";
+import Amount from "../../../components/Amount";
 import "./index.scss";
 
 interface IData {

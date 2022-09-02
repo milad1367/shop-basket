@@ -1,5 +1,5 @@
 import Layout from "./components/Layout";
-import Shop from "./components/Shop";
+import Shop from "./pages/Shop";
 
 function App() {
   return (

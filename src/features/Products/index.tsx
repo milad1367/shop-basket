@@ -1,5 +1,5 @@
 import { useProducts } from "../../services/hooks/useProducts";
-import ProductItem from "../ProductItem";
+import ProductItem from "./ProductItem";
 
 import "./index.scss";
 

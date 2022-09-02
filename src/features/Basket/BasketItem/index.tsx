@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
-import useTimeout from "../../hooks/useInterval";
-import { removeProduct } from "../../state/basketSlice";
-import TrashIcon from "../../assets/svgs/trash.svg";
-import Amount from "../Amount";
+import useTimeout from "../../../hooks/useInterval";
+import { removeProduct } from "../../../state/basketSlice";
+import TrashIcon from "../../../assets/svgs/trash.svg";
+import Amount from "../../../components/Amount";
 import "./index.scss";
 
 interface IBasketItem {

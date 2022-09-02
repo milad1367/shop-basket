@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { selectBasket } from "../../state/basketSlice";
 import { useAppSelector } from "../../state/hooks";
-import BasketItem from "../BasketItem";
+import BasketItem from "./BasketItem";
 import EmptyBasket from "../../assets/svgs/empty_basket.svg";
 import "./index.scss";
 
