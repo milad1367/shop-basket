@@ -10,7 +10,6 @@ export default function Basket() {
   const basketClass = classNames({
     basket: true,
     "basket-empty": !basketItems.length,
-    //"basket-product": basketItems.length,
   });
   return (
     <div className={basketClass}>

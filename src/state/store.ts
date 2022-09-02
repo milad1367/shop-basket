@@ -1,18 +1,27 @@
-import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import {
+  configureStore,
+  ThunkAction,
+  Action,
+  combineReducers,
+} from "@reduxjs/toolkit";
 import basketReducer from "./basketSlice";
 import {
   createStateSyncMiddleware,
-  initMessageListener,
+  initStateWithPrevTab,
+  withReduxStateSync,
 } from "redux-state-sync";
 const reduxStateSyncConfig = {};
+const rootReducer = combineReducers({
+  basket: basketReducer,
+});
 
 export const store = configureStore({
-  reducer: {
-    basket: basketReducer,
-  },
+  reducer: withReduxStateSync(rootReducer),
+
   middleware: [createStateSyncMiddleware(reduxStateSyncConfig)],
 });
-initMessageListener(store);
+//initMessageListener(store);
+initStateWithPrevTab(store);
 
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;
