@@ -12,7 +12,6 @@ import {
 } from "redux-state-sync";
 
 const reduxStateSyncConfig = {
-  whitelist: ["basket/addProduct"],
   prepareState: (state: any) => ({ basket: state.basket }),
 };
 
