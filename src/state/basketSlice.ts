@@ -8,6 +8,7 @@ interface Item {
   orderLimitTime: string;
   price: string;
   poster: string;
+  createdAt: string;
 }
 
 const initialState = [] as Item[];
@@ -43,6 +44,7 @@ export const basketSlice = createSlice({
             orderLimitTime,
             price,
             poster,
+            createdAt: new Date().toString(),
           },
         };
       },

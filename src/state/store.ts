@@ -10,9 +10,13 @@ import {
   initStateWithPrevTab,
   withReduxStateSync,
 } from "redux-state-sync";
+import { filterBasketByExpireDate } from "./utils";
 
 const reduxStateSyncConfig = {
-  prepareState: (state: any) => ({ basket: state.basket }),
+  prepareState: (state: any) => {
+    const basket = filterBasketByExpireDate(state.basket);
+    return { basket };
+  },
 };
 
 const rootReducer = combineReducers({
