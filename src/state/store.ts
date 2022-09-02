@@ -10,7 +10,12 @@ import {
   initStateWithPrevTab,
   withReduxStateSync,
 } from "redux-state-sync";
-const reduxStateSyncConfig = {};
+
+const reduxStateSyncConfig = {
+  whitelist: ["basket/addProduct"],
+  prepareState: (state: any) => ({ basket: state.basket }),
+};
+
 const rootReducer = combineReducers({
   basket: basketReducer,
 });
@@ -20,7 +25,6 @@ export const store = configureStore({
 
   middleware: [createStateSyncMiddleware(reduxStateSyncConfig)],
 });
-//initMessageListener(store);
 initStateWithPrevTab(store);
 
 export type AppDispatch = typeof store.dispatch;
