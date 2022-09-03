@@ -6,18 +6,27 @@
   }
   &-left {
     padding-right: 20px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     &-items {
       position: relative;
     }
     &-img {
-      width: 80px;
-      height: 80px;
       background: #efefef;
       border-radius: 10px;
       position: relative;
+      width: 75px;
+      height: 75px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       img {
-        width: 100%;
-        height: 100%;
+        max-width: 100%;
+        height: auto;
       }
     }
     &-button {
