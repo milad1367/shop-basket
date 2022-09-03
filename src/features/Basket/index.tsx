@@ -14,13 +14,14 @@ export default function Basket() {
   return (
     <div className={basketClass}>
       <div className="basket-container">
-        {basketItems.map((item: any, index: number) => (
-          <BasketItem
-            isLastItem={Number(basketItems.length) - 1 === index}
-            key={item.id}
-            data={item}
-          />
-        ))}
+        {basketItems &&
+          basketItems.map((item: any, index: number) => (
+            <BasketItem
+              isLastItem={Number(basketItems.length) - 1 === index}
+              key={item.id}
+              data={item}
+            />
+          ))}
       </div>
       {!basketItems.length && (
         <div className="basket-empty-items">

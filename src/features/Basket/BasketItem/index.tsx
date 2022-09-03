@@ -10,12 +10,16 @@ interface IBasketItem {
   isLastItem: boolean;
 }
 export default function BasketItem({ data, isLastItem }: IBasketItem) {
-  const { name, price, poster, orderLimitTime, id } = data;
+  const { name, price, poster, orderLimitTime, createdAt, id } = data;
   const dispatch = useDispatch();
   const onRemove = () => {
     dispatch(removeProduct(id));
   };
-  useTimeout(onRemove, orderLimitTime);
+  const now = new Date().getTime();
+  const _createdAt = new Date(createdAt).getTime();
+  const _orderLimitTime = _createdAt + Number(orderLimitTime) - now; //the second controller for checking the order time limit!
+
+  useTimeout(onRemove, _orderLimitTime);
   return (
     <div className="basket-item">
       <div className="basket-item-container">
