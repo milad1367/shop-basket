@@ -3,10 +3,12 @@ import useTimeout from "../../../hooks/useInterval";
 import { removeProduct } from "../../../state/basketSlice";
 import TrashIcon from "../../../assets/svgs/trash.svg";
 import Amount from "../../../components/Amount";
+import { Product } from "../../../models/Product";
+
 import "./index.scss";
 
 interface IBasketItem {
-  data: any;
+  data: Product;
   isLastItem: boolean;
 }
 export default function BasketItem({ data, isLastItem }: IBasketItem) {

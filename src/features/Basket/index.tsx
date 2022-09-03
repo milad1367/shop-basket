@@ -3,6 +3,8 @@ import { selectBasket } from "../../state/basketSlice";
 import { useAppSelector } from "../../state/hooks";
 import BasketItem from "./BasketItem";
 import EmptyBasket from "../../assets/svgs/empty_basket.svg";
+import { Product } from "../../models/Product";
+
 import "./index.scss";
 
 export default function Basket() {
@@ -15,7 +17,7 @@ export default function Basket() {
     <div className={basketClass}>
       <div className="basket-container">
         {basketItems &&
-          basketItems.map((item: any, index: number) => (
+          basketItems.map((item: Product, index: number) => (
             <BasketItem
               isLastItem={Number(basketItems.length) - 1 === index}
               key={item.id}

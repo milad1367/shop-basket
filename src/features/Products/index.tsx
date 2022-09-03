@@ -1,5 +1,6 @@
 import { useProducts } from "../../services/hooks/useProducts";
 import ProductItem from "./ProductItem";
+import { Product } from "../../models/Product";
 
 import "./index.scss";
 
@@ -8,7 +9,7 @@ export default function Products() {
   return (
     <div className="products row">
       {items &&
-        items.map((item: any) => (
+        items.map((item: Product) => (
           <div
             key={item.name}
             className="products-item col-lg-4 col-md-6 col-sm-6 col-xs-12"

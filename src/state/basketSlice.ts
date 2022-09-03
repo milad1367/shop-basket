@@ -1,17 +1,9 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-
+import { Product } from "../models/Product";
 import { RootState } from "./store";
-interface Item {
-  name: string;
-  id: string;
-  orderLimitTime: string;
-  price: string;
-  poster: string;
-  createdAt: string;
-}
 
-const initialState = [] as Item[];
+const initialState = [] as Product[];
 
 export const basketSlice = createSlice({
   name: "basket",
@@ -19,10 +11,10 @@ export const basketSlice = createSlice({
 
   reducers: {
     addProduct: {
-      reducer(state, action: PayloadAction<Item>) {
+      reducer(state, action: PayloadAction<Product>) {
         const { name, orderLimitTime, price } = action.payload;
         const existingProduct = state.find(
-          (item: any) =>
+          (item: Product) =>
             item.name === name &&
             item.orderLimitTime === orderLimitTime &&
             item.price === price

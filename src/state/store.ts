@@ -10,10 +10,13 @@ import {
   initStateWithPrevTab,
   withReduxStateSync,
 } from "redux-state-sync";
+import { Product } from "../models/Product";
 import { filterBasketByExpireDate } from "./utils";
-
+interface IState {
+  basket: Product[];
+}
 const reduxStateSyncConfig = {
-  prepareState: (state: any) => {
+  prepareState: (state: IState) => {
     const basket = filterBasketByExpireDate(state.basket); //I wanna be sure that the user can't cheat the time with reload the browser!
     return { ...state, basket: basket };
   },
