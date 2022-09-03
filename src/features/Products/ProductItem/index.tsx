@@ -23,11 +23,13 @@ export default function ProductItem({ data }: IProductItem) {
   };
   return (
     <div className="product">
-      <div className="product-img">
-        <img alt="test" width={160} height={160} src={poster} />
-        <div className="product-img-time">
+      <div className="product-img-box">
+        <div className="product-img-box-img">
+          <img alt="product-img" src={poster} />
+        </div>
+        <div className="product-img-box-time">
           <img width={16} height={16} alt="remove_time" src={RepeatMusicIcon} />
-          <div className="product-img-time-value">
+          <div className="product-img-box-time-value">
             {Number(orderLimitTime) / 1000} min
           </div>
         </div>

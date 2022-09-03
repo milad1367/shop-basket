@@ -6,7 +6,18 @@
   border-radius: 10px;
   background-color: white;
 
-  &-img {
+  &-img-box {
+    &-img {
+      width: 160px;
+      height: 160px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
     background-color: #efefef;
     min-height: 241px;
     display: flex;
