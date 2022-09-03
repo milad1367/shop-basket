@@ -14,8 +14,8 @@ import { filterBasketByExpireDate } from "./utils";
 
 const reduxStateSyncConfig = {
   prepareState: (state: any) => {
-    const basket = filterBasketByExpireDate(state.basket);
-    return { basket };
+    const basket = filterBasketByExpireDate(state.basket); //I wanna be sure that the user can't cheat the time with reload the browser!
+    return { ...state, basket: basket };
   },
 };
 
