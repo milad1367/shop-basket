@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import useTimeout from "../../../hooks/useInterval";
+import useTimeout from "../../../hooks/useTimeout";
 import { removeProduct } from "../../../state/basketSlice";
 import TrashIcon from "../../../assets/svgs/trash.svg";
 import Amount from "../../../components/Amount";
